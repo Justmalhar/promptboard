@@ -12,7 +12,7 @@
   - **Done**: Review completed prompt results
   
 - **Prompt Management**:
-  - **BYOK: Bring your Own Keys (BYOK) - API keys, Data is not stored on server side, everything is in client side localStorage.
+  - **BYOK**: Bring your Own Keys (BYOK) - API keys, Data is not stored on server side, everything is in client side localStorage.
   - **Create Prompts**: Easily create new prompts with custom parameters
   - **Execute Prompts**: Run prompts directly through OpenAI's API
   - **Preview Results**: View results in a formatted markdown preview
