@@ -232,11 +232,25 @@ export default function Home() {
       </header>
 
       <main className="max-w-7xl mx-auto p-4 md:p-8">
-        <div className="mb-8">
-          <p className="text-white text-opacity-90">
-            Welcome to the AI Prompt Board, an open-source project that helps you manage and execute AI prompts with ease. Drag and drop cards between columns, create new prompts, and see the magic happen!
-          </p>
-        </div>
+        <div className="mb-8 bg-black bg-opacity-20 rounded-lg p-6 text-white text-opacity-90 max-w-none">
+      <h1 className="text-2xl font-bold mb-4">Welcome to the AI Prompt Board</h1>
+      <p className="mb-4">
+        Your open-source solution for effortless AI prompt management and execution!
+      </p>
+      <h2 className="text-xl font-semibold mb-2">✨ Key Features</h2>
+      <ul className="list-disc list-inside mb-4">
+        <li>
+          <strong>Drag & Drop Interface:</strong> Prompt organize themselves by moving across columns.
+        </li>
+        <li>
+          <strong>Create New Prompts and Execute:</strong> Generate prompts tailored to your needs and execute with a single click.
+        </li>
+        <li>
+          <strong>Watch AI Magic in Action:</strong> Run prompts and witness the results live!
+        </li>
+      </ul>
+      <p>Get started now and streamline your AI workflow!</p>
+    </div>
 
         <DragDropContext onDragEnd={handleDragEnd}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

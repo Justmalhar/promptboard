@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PromptBoard
 
-## Getting Started
+![Demo Image](public/demo.png)
 
-First, run the development server:
+## Overview
+**PromptBoard** is an open-source AI prompt management system that provides a streamlined interface for creating, organizing, and executing AI prompts. Built with Next.js and integrated with OpenAI's API, this platform offers a modern, drag-and-drop interface for managing your AI workflows efficiently.
 
+## Key Features
+- **Kanban-Style Board**: Organize prompts across different stages:
+  - **To Do**: Create and store prompts for later use
+  - **In Progress**: Track currently executing prompts
+  - **Done**: Review completed prompt results
+  
+- **Prompt Management**:
+  - **BYOK: Bring your Own Keys (BYOK) - API keys, Data is not stored on server side, everything is in client side localStorage.
+  - **Create Prompts**: Easily create new prompts with custom parameters
+  - **Execute Prompts**: Run prompts directly through OpenAI's API
+  - **Preview Results**: View results in a formatted markdown preview
+  - **Download Results**: Export prompt results as markdown files
+
+
+## Quick Deployment on Vercel
+Deploying **Prompt Board** is simple and fast with Vercel's one-click deployment option. Vercel provides a powerful and scalable environment for your project.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/justmalhar/promptboard)
+
+  
+- **Modern Tech Stack**:
+  - **Next.js 15** with React 19 for a powerful, modern frontend
+  - **TypeScript** for type-safe development
+  - **Tailwind CSS** for responsive, utility-first styling
+  - **@hello-pangea/dnd** for smooth drag-and-drop functionality
+  - **OpenAI Integration** for executing prompts
+  - **React Markdown** for rendering prompt results
+
+## Quick Start
+
+### Prerequisites
+- Node.js (Latest LTS version recommended)
+- OpenAI API key
+
+### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/promptboard.git
+
+# Navigate to the project directory
+cd promptboard
+
+# Install dependencies
+npm install
+
+# Create a .env file and add your OpenAI API key
+# You can also add this later through the UI settings
+echo "OPENAI_API_KEY=your_api_key_here" > .env.local
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to see the application running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development Commands
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Create production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint for code quality |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Detailed Tech Stack
+| Technology | Version | Purpose |
+|------------|---------|----------|
+| Next.js | 15.0.3 | React framework |
+| React | 19.0.0-rc | UI library |
+| TypeScript | ^5 | Type safety |
+| Tailwind CSS | ^3.4.1 | Styling |
+| @hello-pangea/dnd | ^17.0.0 | Drag and drop |
+| OpenAI | ^4.71.1 | AI integration |
+| React Markdown | ^9.0.1 | Markdown rendering |
 
-## Learn More
+## Contributing
+We welcome contributions! Here's how you can help:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Acknowledgments
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Lucide React](https://lucide.dev/)
+- Drag and Drop powered by [@hello-pangea/dnd](https://github.com/hello-pangea/dnd)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stay Connected
+- **Twitter/X**: [@justmalhar](https://twitter.com/justmalhar) 🛠
+- **LinkedIn**: [Malhar](https://linkedin.com/in/justmalhar) 💻
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ and AI by [@justmalhar](https://twitter.com/justmalhar)

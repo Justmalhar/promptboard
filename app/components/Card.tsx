@@ -12,7 +12,7 @@ interface CardProps {
   onStatusChange: (id: string, status: 'todo' | 'inProgress' | 'done') => void;
 }
 
-const systemPromptTemplate = `Create a well-structured markdown document following these guidelines:
+const systemPromptTemplate = `You are a helpful asssistant. Create a well-structured detailed markdown document following these guidelines:
 
 1. Use appropriate heading levels (# for main title, ## for sections, ### for subsections)
 2. Include bullet points or numbered lists where relevant
@@ -22,6 +22,7 @@ const systemPromptTemplate = `Create a well-structured markdown document followi
 6. Use blockquotes for important notes or quotes
 7. Add horizontal rules (---) to separate major sections
 8. Include tables if data presentation is needed
+9. This is a one way conversation where user enters request and you respond back with the research, so do not provide user side explaination. Just focus on the research.
 
 Here's your prompt to transform into markdown:
 
