@@ -14,7 +14,7 @@ import { Toaster } from "./components/ui/toaster"
 import { DroppableColumn } from "./components/DroppableColumn"
 import ReactMarkdown from 'react-markdown'
 import OpenAI from 'openai'
-import { Column, PromptCard } from "./types"
+import { Column, PromptCard, OpenAIError } from "./types"
 
 const STORAGE_KEY = 'ai_prompt_board_data'
 
@@ -153,7 +153,7 @@ export default function Home() {
         title: "Success",
         description: "Prompt completed successfully",
       })
-    } catch (error: any) {
+    } catch (error) {
       // Move back to Todo
       setColumns((prev) =>
         prev.map((col) => {
@@ -173,9 +173,10 @@ export default function Home() {
         })
       )
 
+      const openAIError = error as OpenAIError
       toast({
         title: "Error",
-        description: error.message || "Failed to run prompt",
+        description: openAIError.message || "Failed to run prompt",
         variant: "destructive",
       })
     }

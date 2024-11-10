@@ -10,3 +10,10 @@ export type Column = {
   title: string
   cards: PromptCard[]
 }
+
+export interface OpenAIError {
+  message: string
+  type?: string
+  code?: string
+  param?: string
+}
